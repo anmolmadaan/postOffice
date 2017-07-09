@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Bhuvan Service Example</title>
+<script
+src="http://openlayers.org/api/OpenLayers.js"></script>
+</head>
+<body>
+<div style="width:100%; height:100%" id="map"></div>
+<script defer="defer" type="text/javascript">
+var map = new OpenLayers.Map('map');
+var wms = new OpenLayers.Layer.WMS( "Bhuvan WMS"," http://bhuvan5.nrsc.gov.in/bhuvan/wms ",
+{'layers': ' vector:BR_LULC50K_0506 '});
+map.addLayer(wms);
+map.setCenter(new OpenLayers.LonLat(85.79, 25.69), 8);
+map.zoomToMaxExtent();
+</script>
+</body>
+</html>
