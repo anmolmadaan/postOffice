@@ -12,7 +12,7 @@ router.get('/search',function(req,res){
   var query = req.query.search;
   query.replace(' ','+');
   let results;
-  request.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query='+query+'&key=AIzaSyBwkJa7-4EKLgFg5y645mET2_zy6DHsTvE',function(err,res,body){
+  request.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query='+query+'&key=API_KEY',function(err,res,body){
 if(!err){
     results = res.body.results;
     // console.log(res.body);
