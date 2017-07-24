@@ -48,7 +48,10 @@ router.post('/upiCallback/:id',function(req,res){
        var body =new Receipt(req.body);
        body.save(function(err){
          if(err){
-           console.log(err);
+           res.send("failure");
+         }
+         else{
+           res.send("success");
          }
        });
 });
