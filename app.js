@@ -10,7 +10,8 @@ var users = require('./routes/users');
 
 var app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://s3post:s3post@ds151222.mlab.com:51222/s3post');
+//mongoose.connect('mongodb://s3post:s3post@ds151222.mlab.com:51222/s3post');
+mongoose.connect('mongodb://localhost/s3post');
 var db = mongoose.connection;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

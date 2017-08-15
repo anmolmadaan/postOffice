@@ -17,7 +17,12 @@ var postSchema = new Schema({
     address : String
   },
   weight : Number,
-  amount : Number,
+  amount : {
+    wAmount : Number,
+    dAmount : Number,
+    tAmount : Number
+  },
+  distance : Number,
   payment_status : String
 });
 
