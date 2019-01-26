@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/sample', function(req, res, next) {
   //res.render('index', { title: 's3post' });
-  var x=res.body;
+  var x=req.body;
   x.result = "res";
   res.json(x);
 });
