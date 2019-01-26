@@ -9,6 +9,14 @@ var QR = require('qrcode');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 's3post' });
+  var x={
+    response: "welcome to s3post"
+  };
+  res.json(x);
+});
+
+router.get('/', function(req, res, next) {
+  //res.render('index', { title: 's3post' });
   var x=res.body;
   x.result = "res";
   res.json(x);
