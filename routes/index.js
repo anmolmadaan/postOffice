@@ -9,7 +9,9 @@ var QR = require('qrcode');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 's3post' });
-  res.redirect('/first.html');
+  var x=res.body;
+  x.result = "res";
+  res.json(x);
 });
 
 router.get('/search',function(req,res){
